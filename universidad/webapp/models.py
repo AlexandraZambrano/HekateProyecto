@@ -45,10 +45,6 @@ class EstudianteProfesor(models.Model):
     Profesor = models.ForeignKey(Profesor, on_delete=models.SET_NULL, null=True)
     Estudiante = models.ManyToManyField(Estudiante)
 
-class Domicilio(models.Model):
-    calle = models.CharField(max_length=100)
-    numero_calle = models.IntegerField(max_length=5)
-
 
 
 
