@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Great+Vibes&family=Joan&family=Merriweather:wght@300;700;900&family=Nunito:wght@200;300;400;700&family=Open+Sans:ital,wght@0,500;0,600;1,400&family=Poppins:wght@100;200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <title>UHM</title>
+</head>
+
+<body>
+    <section class="header">
+        <div class="nav-items">
+            <div class="navbar">
+                <img class="logo" src="./static/media/LOGOUHM.png" alt="Logo UHM">
+
+                <div class="titulo">
+                    <h2>UHM</h2>
+                    <h3>Universidad Hékate de Madrid</h3>
+                </div>
+
+            </div>
+
+            <a class="rgt" href='registration/'>Registrate</a>
+
+        </div>
+
+        <div class="presentacion">
+
+            <div class="text-box-1">
+                <h2>Conócenos</h2>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate corrupti libero inventore. In
+                    recusandae natus, eius neque, culpa repudiandae quibusdam fugit voluptatibus, animi modi atque
+                    laborum
+                    expedita facilis saepe non?</p>
+                <div class="text-img">
+                    <img src="https://pixabay.com/get/g18ee2bb41a1ef23bca44d868b01d2f405ce49be4d9eb66cc71f10ce6fd9377b0dc0b5b56fda80ead165837e04d2991e6517076dbee97dfc31d34b3226bfedb983f342e2a7b4c82ef538b025a2156ea9a_1920.jpg"
+                        alt="Cartas de Tarot">
+                    <img src="https://pixabay.com/get/gc9a276ea2ae2c91862efd44f285f0dcd3f3892e7208e50f6c835f66a01f619d3327f3fa429167a10f3b9266a98f9f670472c3cf6be290408a28527014d2c13e0d9f8c70c0b0a3cc92996b0fcef1340c0_1920.jpg"
+                        alt="Castillo sobre una montaña">
+                </div>
+            </div>
+
+            <div class="login">
+                <form action="" method="post">
+
+                    <div class="container">
+                        <label for="uname"><b>Usuario:</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <br>
+
+                        <label for="psw"><b>Clave:</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <br>
+
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Recuérdame
+                        </label>
+
+                        <br>
+
+                        <button class="hero-btn" type="submit">LOGIN</button>
+
+                        <br>
+
+                        <span class="psw"><a href="#">¿Has olvidado tu contraseña?</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="Opiniones">
+
+        <div class="text-box-2">
+            <h2>Opiniones de Nuestros <br> Estudiantes</h2>
+        </div>
+
+
+        <div class="row">
+            <div class="testimonials-col">
+                <img src="./static/media/user1.jpg">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus saepe eius quis? Consequuntur
+                        id, architecto sequi voluptatum minus dolorem laudantium pariatur explicabo, accusantium nam
+                        neque doloremque, voluptate minima cupiditate mollitia?</p>
+                    <h3>Christine Berley</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+
+            </div>
+
+            <div class="testimonials-col">
+                <img src="./static/media/user2.jpg">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus saepe eius quis? Consequuntur
+                        id, architecto sequi voluptatum minus dolorem laudantium pariatur explicabo, accusantium nam
+                        neque doloremque, voluptate minima cupiditate mollitia?</p>
+                    <h3>David Byer</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

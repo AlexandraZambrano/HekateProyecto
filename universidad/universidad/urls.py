@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from webapp.views import vistahecate
+from webapp.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',vistahecate)
+    path('', login),
+    path('registration/', registration),
+    path('docente', docente),
+
 ]
