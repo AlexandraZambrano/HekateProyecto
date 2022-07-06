@@ -2,39 +2,42 @@
 <html lang="en">
 
 <head>
+     {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Docente</title>
-     {% load static %}
-    <link rel="stylesheet" href="{% static 'style2.css'%}">
+     <link rel="stylesheet" href="{% static 'main.css'%}">
 </head>
 
 <body>
+    <section class="pag">
 
-    <section>
-        <nav class="menu">
-            <ul>
-                <li><a href="#">
-                        <h3>Inicio</h3>
-                    </a></li>
-                <li><a href="#">
-                        <h3>Curso</h3>
-                    </a></li>
-                <li><a href="#">
-                        <h3>Docente</h3>
-                    </a></li>
-                <li><a href="#">
-                        <h3>Cerar Sesión</h3>
-                    </a></li>
-            </ul>
-        </nav>
+        <div class="main-container">
+            <nav class="nav-links">
+                <ul>
+                    <a href="#">
+                        <li>Inicio</li>
+                    </a>
+                    <a href="#">
+                        <li>Curso</li>
+                    </a>
+                    <a href="#">
+                        <li>Docente</li>
+                    </a>
+                    <a href="#">
+                        <li>Cerrar Sesión</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
 
 
-        <div class="container_dcha">
+
+        <div class="container_dcha1">
 
             <div class="prof">
-                <img src="./static/media/Mteresa.jpg" alt="Cartas de Tarot">
+                <img src= "{% static './media/Mteresa.jpg' %}" alt="Cartas de Tarot">
                 <div class="nombre">
                     <h2>María Teresa <br> Tarot</h2>
                 </div>
@@ -44,19 +47,21 @@
                             <h3>Alquimia</h3>
                         </a></div>
                     <div><a href="#">
-                        <h3>Adivinación</h3></a>
+                            <h3>Adivinación</h3>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="prof">
-                <img src="./static/media/minerva.jpg" alt="Minerva McGonagall">
+                <img src=  "{% static './media/minerva.jpg' %}" alt="Minerva McGonagall">
                 <div class="nombre">
                     <h2>Minerva <br> McGonagall</h2>
                 </div>
                 <div class="materia">
                     <div><a href="#">
-                        <h3>Esbats</h3></a>
+                            <h3>Esbats</h3>
+                        </a>
                     </div>
                     <div><a href="#">
                             <h3>Sabbats</h3>
@@ -64,7 +69,7 @@
                 </div>
             </div>
             <div class="prof">
-                <img src="./static/media/alastor.jpg" alt="Alastor Moody">
+                <img src= "{% static './media/alastor.jpg' %}" alt="Alastor Moody">
                 <div class="nombre">
                     <h2>Alastor <br> Moody</h2>
                 </div>
@@ -115,8 +120,6 @@
 
                 </div>
             </div>
-
-
 
     </section>
 
