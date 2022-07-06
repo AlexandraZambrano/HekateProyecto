@@ -1,7 +1,8 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 
 # Create your vie here.
+from webapp.forms import RegistroForm
 from webapp.models import *
 
 
@@ -20,3 +21,34 @@ def estudiantes(request):
 
 def perfil(request):
     return render(request, 'perfil.html')
+
+def estudianteNuevo(request):
+    if request.method == 'POST':
+        formaEstudiantes = RegistroForm(request.POST)
+        if formaEstudiantes.is_valid():
+            formaEstudiantes.save()
+            return redirect('estudiante')
+
+    else:
+        formaEstudiantes = RegistroForm
+
+        return render(request, 'NuevoEstudiante.html', {'forestudiante': formaEstudiantes})
+
+def editarEstudiante(request, id):
+    estudiante = get_object_or_404(Estudiante, pk=id)
+    if request.method == 'POST':
+        formaEstudiantes = RegistroForm(request.POST, instance=estudiante)
+        if formaEstudiantes.is_valid():
+            formaEstudiantes.save()
+            return redirect('estudiante')
+
+    else:
+        formaEstudiantes = RegistroForm(instance=estudiante)
+
+    return render(request, 'editar.html', {'forestudiante': formaEstudiantes})
+
+def eliminarEstudiante(request, id):
+    estudiante = get_object_or_404(Estudiante, pk=id)
+    if estudiante:
+        estudiante.delete()
+        return redirect('estudiante')

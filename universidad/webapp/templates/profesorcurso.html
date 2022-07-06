@@ -42,8 +42,11 @@
             <br>
             <div class="profesors_cursos">
                 <h3>Historia de brujería</h3>
+                            <button type="button" class="button">
+        <a href="NuevoEstudiante/">Añadir Alumno</a>
             </div>
             <br>
+
             <table>
                 <thead>
                     <tr>
@@ -63,6 +66,14 @@
             <td>{{x.email}}</td>
             <td>{{x.asignatura.nombre_asignatura}}</td>
             <td>{{x.nota}}</td>
+            <td><button type="button" class="button">
+    <a href="editar/{{x.id}}">Editar</a>
+</button>
+            <button type="button" class="buttonred">
+    <a href="eliminarestudiante/{{x.id}}">Eliminar</a>
+</button>
+        </td>
+    </tr>
         </tr>
         {% endfor %}
         </tbody>

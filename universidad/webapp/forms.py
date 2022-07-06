@@ -1,8 +1,12 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, EmailInput
 
-from universidad.webapp.models import Profesor
+from webapp.models import *
 
 
 class RegistroForm(ModelForm):
     class Meta:
-        model = Profesor f
+        model = Estudiante
+        fields = '__all__'
+        widgets = {
+            'email': EmailInput(attrs={'type':'email'})
+        }

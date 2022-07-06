@@ -35,7 +35,7 @@ class Estudiante(models.Model):
     nota = models.FloatField(default=0)
     asignatura = models.ForeignKey(Asignatura, on_delete=models.SET_NULL, null=True)
     def __str__(self):
-        return f'Estudiante {self.id}: {self.nombre} {self.apellido_1} {self.curso}'
+        return f'Estudiante {self.id}: {self.nombre} {self.apellido_1} {self.curso} {self.apellido_2} {self.email} {self.nota}'
 
     # REVISAR lo de la primaryKey  *otras propiedades*
      #category = models.ForeignKey(Curso, related_name="Estudiante", blank=True, null=True,
