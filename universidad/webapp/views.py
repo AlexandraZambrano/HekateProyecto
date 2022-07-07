@@ -1,8 +1,9 @@
+from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 
 # Create your vie here.
-from webapp.forms import RegistroForm
+from webapp.forms import RegistroForm, RegForm
 from webapp.models import *
 
 
@@ -52,3 +53,15 @@ def eliminarEstudiante(request, id):
     if estudiante:
         estudiante.delete()
         return redirect('estudiante')
+
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+    else:
+        form = UserCreationForm()
+
+        return render(request, 'registration.html', {'formUser': form})

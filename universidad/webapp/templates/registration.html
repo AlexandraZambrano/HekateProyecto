@@ -10,12 +10,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Great+Vibes&family=Joan&family=Merriweather:wght@300;700;900&family=Nunito:wght@200;300;400;700&family=Open+Sans:ital,wght@0,500;0,600;1,400&family=Poppins:wght@100;200;300;400;600;700;800;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+            {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css'%}">
     <title>Document</title>
 </head>
 
 <body>
-
     <section class="register">
 
         <span class="sub-titulo">
@@ -23,30 +23,13 @@
         </span>
 
         <div class="sign-up">
-            <form class="sup" action="" method="post">
+            <form class="sup" method="post">
 
                 <div class="container-su">
-                    <label for="uname"><b>Nombre:</b></label>
 
-                    <input type="text" placeholder="Ingrese su Nombre" name="uname" required>
+                      {% csrf_token %}
+                {{formUser}}
 
-                    <br>
-
-                    <label for="ap"><b>Apellidos:</b></label>
-
-                    <input type="text" placeholder="Ingrese sus Apellidos" name="ap" required>
-
-                    <br>
-
-                    <label for="us"><b>Nombre de Usuario:</b></label>
-
-                    <input type="text" placeholder="Por ejemplo: Amarys38" name="us" required>
-
-                    <br>
-
-                    <label for="psw"><b>Clave:</b></label>
-
-                    <input type="password" placeholder="Ingrese una Clave" name="psw" required>
 
                     <div class="botones">
 
@@ -54,6 +37,7 @@
                         <button class="hero-btn-2" type="submit">Registrarme</button>
                     </div>
                 </div>
+
             </form>
         </div>
     </section>
