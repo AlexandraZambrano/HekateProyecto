@@ -16,8 +16,20 @@ class RegistroForm(ModelForm):
 class RegForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ['username', 'first_name', 'last_name', 'email']
-        labels = {'username':'Nombre de Usuario', 'first_name':'Nombre', 'last_name':'Apellidos', 'email': 'Email'}
+        fields = [
+                'username',
+                'first_name',
+                'last_name',
+                'email',
+                   ]
+        labels = {
+            'username':'Nombre de usuario',
+            'first_name':'Nombre',
+            'last_name':'Apellidos',
+            'email':'Correo',
+
+        }
+
         widgets = {
             'email': EmailInput(attrs={'type':'email'})
         }

@@ -20,7 +20,7 @@
     <section class="header">
         <div class="nav-items">
             <div class="navbar">
-                <img class="logo" src="./static/media/LOGOUHM.png" alt="Logo UHM">
+                <img class="logo"  src="{% static './media/LOGOUHM.png' %}" alt="Logo UHM">
 
                 <div class="titulo">
                     <h2>UHM</h2>
@@ -29,7 +29,7 @@
 
             </div>
 
-            <a class="rgt" href='registration/'>Registrate</a>
+            <a class="rgt" href="{% url 'nuevoUsuario' %}">Registrate</a>
 
         </div>
 
@@ -43,24 +43,26 @@
                     laborum
                     expedita facilis saepe non?</p>
                 <div class="text-img">
-                    <img src="https://pixabay.com/get/g18ee2bb41a1ef23bca44d868b01d2f405ce49be4d9eb66cc71f10ce6fd9377b0dc0b5b56fda80ead165837e04d2991e6517076dbee97dfc31d34b3226bfedb983f342e2a7b4c82ef538b025a2156ea9a_1920.jpg"
+                    <img src="{% static './media/tarot.jpg' %}"
                         alt="Cartas de Tarot">
-                    <img src="https://pixabay.com/get/gc9a276ea2ae2c91862efd44f285f0dcd3f3892e7208e50f6c835f66a01f619d3327f3fa429167a10f3b9266a98f9f670472c3cf6be290408a28527014d2c13e0d9f8c70c0b0a3cc92996b0fcef1340c0_1920.jpg"
+                    <img src="{% static './media/cast.jpg' %}"
                         alt="Castillo sobre una montaña">
                 </div>
             </div>
 
             <div class="login">
-                <form action="" method="post">
+                <form action="" method="POST">
+
+                    {% csrf_token %}
 
                     <div class="container">
-                        <label for="uname"><b>Usuario:</b></label>
-                        <input type="text" placeholder="Enter Username" name="uname" required>
+                        <label for="username"><b>Usuario:</b></label>
+                        <input type="text" placeholder="Enter Username" name="username" required>
 
                         <br>
 
-                        <label for="psw"><b>Clave:</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <label for="password"><b>Clave:</b></label>
+                        <input type="password" placeholder="Enter Password" name="password" required>
 
                         <br>
 
@@ -90,7 +92,7 @@
 
         <div class="row">
             <div class="testimonials-col">
-                <img src="./static/media/user1.jpg">
+                <img src= "{% static './media/user1.jpg' %}">
                 <div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus saepe eius quis? Consequuntur
                         id, architecto sequi voluptatum minus dolorem laudantium pariatur explicabo, accusantium nam
@@ -106,7 +108,7 @@
             </div>
 
             <div class="testimonials-col">
-                <img src="./static/media/user2.jpg">
+                <img src= "{% static './media/user2.jpg' %}">
                 <div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus saepe eius quis? Consequuntur
                         id, architecto sequi voluptatum minus dolorem laudantium pariatur explicabo, accusantium nam

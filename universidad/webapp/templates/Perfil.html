@@ -22,18 +22,18 @@
         <div class="main-container">
             <nav class="nav-links">
                 <ul>
-                    <a href="#">
-                        <li>Inicio</li>
-                    </a>
-                    <a href="#">
-                        <li>Curso</li>
-                    </a>
-                    <a href="#">
-                        <li>Docente</li>
-                    </a>
-                    <a href="#">
-                        <li>Cerrar Sesión</li>
-                    </a>
+                   <a href="#">
+                    <li>Inicio</li>
+                </a>
+                <a href="/">
+                    <li>Curso</li>
+                </a>
+                <a href="{% url 'docente'  %}">
+                    <li>Docente</li>
+                </a>
+                <a href="{% url 'saliendo'  %}">
+                    <li>Cerrar Sesión</li>
+                </a>
                 </ul>
             </nav>
         </div>
@@ -41,7 +41,7 @@
         <div class="container_dcha">
 
             <div class="circulo">
-                <image src="./static/media/Mteresa.jpg">
+                <image src="{% static './media/Mteresa.jpg' %}" alt="Maria Teresa" >
             </div>
             <div class="rectangulo">
                 <h2>Nombre:</h2>

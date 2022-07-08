@@ -217,7 +217,7 @@ input{
 .register{
     background-color: #B790C5;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
 }
 
 .sub-titulo h1{

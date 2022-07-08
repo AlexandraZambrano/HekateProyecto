@@ -170,3 +170,34 @@ td{
     border: solid 1px black;
     padding: 10px;
 }
+
+.profesors_cursos a{
+    text-align: center;
+    padding: 10px 10px;
+    color: black;
+    background-color: #B790C5;
+    border-radius: 30px;
+    border: solid black 2px;
+    text-decoration:none;
+}
+
+.editar{
+    background-color: blue;
+    padding: 0 10px;
+    border: 1;
+}
+
+.editar a{
+    text-decoration:none;
+}
+
+.eliminar{
+    background-color: red;
+    padding: 0 10px;
+    border: 1;
+}
+
+.eliminar a{
+    text-decoration: none;
+    color: white;
+}

@@ -16,18 +16,18 @@
         <div class="main-container">
             <nav class="nav-links">
                 <ul>
-                    <a href="#">
-                        <li>Inicio</li>
-                    </a>
-                    <a href="#">
-                        <li>Curso</li>
-                    </a>
-                    <a href="#">
-                        <li>Docente</li>
-                    </a>
-                    <a href="#">
-                        <li>Cerrar Sesión</li>
-                    </a>
+                    <a href="{% url 'perfil'  %}">
+                    <li>Inicio</li>
+                </a>
+                <a href="/">
+                    <li>Curso</li>
+                </a>
+                <a href="#">
+                    <li>Docente</li>
+                </a>
+                <a href="{% url 'saliendo'  %}">
+                    <li>Cerrar Sesión</li>
+                </a>
                 </ul>
             </nav>
         </div>
@@ -83,7 +83,7 @@
                 </div>
             </div>
             <div class="prof">
-                <img src="./static/media/pomona.jpg" alt="Pomona Sprout">
+                <img src= "{% static './media/pomona.jpg' %}" alt="Pomona Sprout">
                 <div class="nombre">
                     <h2>Pomona <br> Sprout</h2>
                 </div>
@@ -97,7 +97,7 @@
                 </div>
             </div>
             <div class="prof">
-                <img src="./static/media/severus.jpg" alt="Severus Snape">
+                <img src="{% static './media/severus.jpg' %}" alt="Severus Snape">
                 <div class="nombre">
                     <h2>Severus <br> Snape</h2>
                 </div>
@@ -109,7 +109,7 @@
                 </div>
             </div>
             <div class="prof">
-                <img src="./static/media/cuthbert.jpg" alt="Cuthbert Binns">
+                <img src="{% static './media/cuthbert.jpg' %}" alt="Cuthbert Binns">
                 <div class="nombre">
                     <h2>Cuthbert <br> Binns</h2>
                 </div>
